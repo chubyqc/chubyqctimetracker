@@ -1,0 +1,88 @@
+<html>
+	<head>
+        <title>Application Sandbox sample</title>
+        <link href="timetracker.css" rel="stylesheet" type="text/css"/>
+        <script type="text/javascript" src="lib/air/AIRAliases.js"></script>
+        <script type="text/javascript" src="lib/mootools/mootools.js"></script>
+	</head>
+    <body>
+    	<div id="menu">
+    		<div class="menuButton">Templates</div>
+			<div class="menuButton">Tracker</div>
+    	</div>
+    	<div id="states">
+	    	<div id="tracker">
+	    		<table>
+	    			<tr>
+	    				<td>
+	    					<select id="templateChooser">
+	    						<option>Templates</option>
+	    					</select>
+	    				</td>
+						<td>
+							<div class="menuButton">New</div>
+						</td>
+	    			</tr>
+	    		</table>
+	    		<div id="trackerList">
+	    			
+				</div>
+	    		<div id="trackerTotal">
+	    			
+	    		</div>
+	    	</div>
+			<div id="templateCreator">
+				<div class="menuButton">New</div>
+			</div>
+		</div>
+		<div id="htmlTemplates">
+			<div id="htmlTemplatesInput" class="input">
+				<input id="htmlTemplatesInputText" class="inputText" type="text" />
+				<select id="htmlTemplatesInputSelect" class="inputSelect">
+					<option>History</option>
+				</select>
+				<div id="htmlTemplatesInputHistoryButton" class="inputHistoryButton">
+					+
+				</div>
+			</div>
+			<div id="htmlTemplatesTask" class="task">
+				<table>
+					<tr>
+						<td>
+							<table>
+								<tr id="htmlTemplatesTaskInputs">
+								</tr>
+							</table>
+						</td>
+						<td>
+							<div id="htmlTemplatesTaskControl">
+								<table>
+									<tr>
+										<td class="taskTime">
+											<div id="htmlTemplatesTaskTime"></div>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div id="htmlTemplatesTaskStart" class="taskStart">
+												Start
+											</div>
+											<div id="htmlTemplatesTaskStop" class="taskStop">
+												Stop
+											</div>
+										</td>
+										<td>
+											<div id="htmlTemplatesTaskDelete" class="menuButton">
+												Delete
+											</div>
+										</td>
+									</tr>
+								</table>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+    </body>
+</html>
