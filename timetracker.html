@@ -4,11 +4,22 @@
         <link href="timetracker.css" rel="stylesheet" type="text/css"/>
         <script type="text/javascript" src="lib/air/AIRAliases.js"></script>
         <script type="text/javascript" src="lib/mootools/mootools.js"></script>
+        <script type="text/javascript" src="lib/timetracker.js"></script>
+        <script type="text/javascript" src="lib/htmltemplate.js"></script>
+        <script type="text/javascript" src="lib/abstractinput.js"></script>
+        <script type="text/javascript" src="lib/htmltemplates.js"></script>
+        <script type="text/javascript" src="lib/largeinput.js"></script>
+        <script type="text/javascript" src="lib/menu.js"></script>
+        <script type="text/javascript" src="lib/smallinput.js"></script>
+        <script type="text/javascript" src="lib/task.js"></script>
+        <script type="text/javascript" src="lib/template.js"></script>
 	</head>
-    <body>
+    <body onload="new tt.TimeTracker(
+		new tt.Menu($('menuButtonTemplates'), $('menuButtonTracker')),
+		$('states'), $('htmlTemplates'))">
     	<div id="menu">
-    		<div class="menuButton">Templates</div>
-			<div class="menuButton">Tracker</div>
+    		<div id="menuButtonTemplates" class="menuButton">Templates</div>
+			<div id="menuButtonTracker" class="menuButton">Tracker</div>
     	</div>
     	<div id="states">
 	    	<div id="tracker">
@@ -31,7 +42,7 @@
 	    			
 	    		</div>
 	    	</div>
-			<div id="templateCreator">
+			<div id="templates">
 				<div class="menuButton">New</div>
 			</div>
 		</div>
