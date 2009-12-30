@@ -1,18 +1,25 @@
 <html>
 	<head>
         <title>Application Sandbox sample</title>
-        <link href="timetracker.css" rel="stylesheet" type="text/css"/>
+        <link type="text/css" href="timetracker.css" rel="stylesheet"/>
         <script type="text/javascript" src="lib/air/AIRAliases.js"></script>
         <script type="text/javascript" src="lib/mootools/mootools.js"></script>
+		
         <script type="text/javascript" src="lib/timetracker.js"></script>
         <script type="text/javascript" src="lib/htmltemplate.js"></script>
-        <script type="text/javascript" src="lib/abstractinput.js"></script>
         <script type="text/javascript" src="lib/htmltemplates.js"></script>
-        <script type="text/javascript" src="lib/largeinput.js"></script>
         <script type="text/javascript" src="lib/menu.js"></script>
-        <script type="text/javascript" src="lib/smallinput.js"></script>
-        <script type="text/javascript" src="lib/task.js"></script>
         <script type="text/javascript" src="lib/template.js"></script>
+        <script type="text/javascript" src="lib/utils.js"></script>
+		
+        <script type="text/javascript" src="lib/states/abstractstate.js"></script>
+        <script type="text/javascript" src="lib/states/templates.js"></script>
+        <script type="text/javascript" src="lib/states/tracker.js"></script>
+		
+        <script type="text/javascript" src="lib/factories/inputfactory.js"></script>
+        <script type="text/javascript" src="lib/factories/taskfactory.js"></script>
+        <script type="text/javascript" src="lib/factories/templatefactory.js"></script>
+        <script type="text/javascript" src="lib/factories/templateinputfactory.js"></script>
 	</head>
     <body onload="new tt.TimeTracker(
 		new tt.Menu($('menuButtonTemplates'), $('menuButtonTracker')),
@@ -43,12 +50,34 @@
 	    		</div>
 	    	</div>
 			<div id="templates">
-				<div class="menuButton">New</div>
+				<div id="templatesNew" class="menuButton">New</div>
+				<div id="templatesList"></div>
 			</div>
 		</div>
 		<div id="htmlTemplates">
+			<div id="htmlTemplatesTemplate">
+				<table>
+					<tr>
+						<td>
+							<table>
+								<tr id="htmlTemplatesTemplateInputs"></tr>
+							</table>
+						</td>
+						<td>
+							<div id="htmlTemplatesTemplateAdd">Add</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div id="htmlTemplatesTemplateInput">
+				<input id="htmlTemplatesTemplateInputText" type="text"/>
+				<select id="htmlTemplatesTemplateInputType">
+					<option value="small">Small</option>
+					<option value="large">Large</option>
+				</select>
+			</div>
 			<div id="htmlTemplatesInput" class="input">
-				<input id="htmlTemplatesInputText" class="inputText" type="text" />
+				<textarea id="htmlTemplatesInputText" class="inputText" type="text"></textarea>
 				<select id="htmlTemplatesInputSelect" class="inputSelect">
 					<option>History</option>
 				</select>
@@ -66,30 +95,28 @@
 							</table>
 						</td>
 						<td>
-							<div id="htmlTemplatesTaskControl">
-								<table>
-									<tr>
-										<td class="taskTime">
-											<div id="htmlTemplatesTaskTime"></div>
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<div id="htmlTemplatesTaskStart" class="taskStart">
-												Start
-											</div>
-											<div id="htmlTemplatesTaskStop" class="taskStop">
-												Stop
-											</div>
-										</td>
-										<td>
-											<div id="htmlTemplatesTaskDelete" class="menuButton">
-												Delete
-											</div>
-										</td>
-									</tr>
-								</table>
-							</div>
+							<table>
+								<tr>
+									<td class="taskTime">
+										<div id="htmlTemplatesTaskTime"></div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div id="htmlTemplatesTaskStart" class="taskStart">
+											Start
+										</div>
+										<div id="htmlTemplatesTaskStop" class="taskStop">
+											Stop
+										</div>
+									</td>
+									<td>
+										<div id="htmlTemplatesTaskDelete" class="menuButton">
+											Delete
+										</div>
+									</td>
+								</tr>
+							</table>
 						</td>
 					</tr>
 				</table>
