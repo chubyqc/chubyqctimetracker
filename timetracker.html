@@ -2,19 +2,28 @@
 	<head>
         <title>Application Sandbox sample</title>
         <link type="text/css" href="timetracker.css" rel="stylesheet"/>
+		
         <script type="text/javascript" src="lib/air/AIRAliases.js"></script>
         <script type="text/javascript" src="lib/mootools/mootools.js"></script>
 		
-        <script type="text/javascript" src="lib/timetracker.js"></script>
-        <script type="text/javascript" src="lib/htmltemplate.js"></script>
-        <script type="text/javascript" src="lib/htmltemplates.js"></script>
-        <script type="text/javascript" src="lib/menu.js"></script>
-        <script type="text/javascript" src="lib/template.js"></script>
-        <script type="text/javascript" src="lib/utils.js"></script>
+        <script type="text/javascript" src="lib/helpers/element.js"></script>
+        <script type="text/javascript" src="lib/helpers/utils.js"></script>
 		
-        <script type="text/javascript" src="lib/states/abstractstate.js"></script>
-        <script type="text/javascript" src="lib/states/templates.js"></script>
-        <script type="text/javascript" src="lib/states/tracker.js"></script>
+        <script type="text/javascript" src="lib/menu.js"></script>
+        <script type="text/javascript" src="lib/timetracker.js"></script>
+		
+        <script type="text/javascript" src="lib/htmltemplate/htmltemplate.js"></script>
+        <script type="text/javascript" src="lib/htmltemplate/htmltemplates.js"></script>
+		
+        <script type="text/javascript" src="lib/abstractstate.js"></script>
+		
+        <script type="text/javascript" src="lib/templates/templateinput.js"></script>
+        <script type="text/javascript" src="lib/templates/templates.js"></script>
+        <script type="text/javascript" src="lib/templates/template.js"></script>
+		
+        <script type="text/javascript" src="lib/tracker/task.js"></script>
+        <script type="text/javascript" src="lib/tracker/taskinput.js"></script>
+        <script type="text/javascript" src="lib/tracker/tracker.js"></script>
 		
         <script type="text/javascript" src="lib/factories/inputfactory.js"></script>
         <script type="text/javascript" src="lib/factories/taskfactory.js"></script>
@@ -24,10 +33,16 @@
     <body onload="new tt.TimeTracker(
 		new tt.Menu($('menuButtonTemplates'), $('menuButtonTracker')),
 		$('states'), $('htmlTemplates'))">
-    	<div id="menu">
-    		<div id="menuButtonTemplates" class="menuButton">Templates</div>
-			<div id="menuButtonTracker" class="menuButton">Tracker</div>
-    	</div>
+    	<table id="menu">
+    		<tr>
+    			<td>
+    				<div id="menuButtonTemplates" class="menuButton">Templates</div>
+				</td>
+				<td>
+					<div id="menuButtonTracker" class="menuButton">Tracker</div>
+				</td>
+    		</tr>
+    	</table>
     	<div id="states">
 	    	<div id="tracker">
 	    		<table>
@@ -38,16 +53,12 @@
 	    					</select>
 	    				</td>
 						<td>
-							<div class="menuButton">New</div>
+							<div id="newTaskButton" class="menuButton">New</div>
 						</td>
 	    			</tr>
 	    		</table>
-	    		<div id="trackerList">
-	    			
-				</div>
-	    		<div id="trackerTotal">
-	    			
-	    		</div>
+	    		<div id="trackerList"></div>
+	    		<div id="trackerTotal"></div>
 	    	</div>
 			<div id="templates">
 				<div id="templatesNew" class="menuButton">New</div>
@@ -56,6 +67,7 @@
 		</div>
 		<div id="htmlTemplates">
 			<div id="htmlTemplatesTemplate">
+				<input id="htmlTemplatesTemplateName" type="text"/>
 				<table>
 					<tr>
 						<td>
@@ -64,26 +76,32 @@
 							</table>
 						</td>
 						<td>
-							<div id="htmlTemplatesTemplateAdd">Add</div>
+							<div id="htmlTemplatesTemplateAdd">+</div>
+						</td>
+						<td>
+							<div id="htmlTemplatesTemplateRemove">-</div>
 						</td>
 					</tr>
 				</table>
 			</div>
 			<div id="htmlTemplatesTemplateInput">
-				<input id="htmlTemplatesTemplateInputText" type="text"/>
-				<select id="htmlTemplatesTemplateInputType">
-					<option value="small">Small</option>
-					<option value="large">Large</option>
-				</select>
+				<table>
+					<tr>
+						<td>
+							<input id="htmlTemplatesTemplateInputText" type="text"/>
+						</td>
+						<td>
+							<div id="htmlTemplatesTemplateInputText">-</div>
+						</td>
+					</tr>
+				</table>
 			</div>
 			<div id="htmlTemplatesInput" class="input">
+				<div id="htmlTemplatesInputLabel"></div>
 				<textarea id="htmlTemplatesInputText" class="inputText" type="text"></textarea>
 				<select id="htmlTemplatesInputSelect" class="inputSelect">
 					<option>History</option>
 				</select>
-				<div id="htmlTemplatesInputHistoryButton" class="inputHistoryButton">
-					+
-				</div>
 			</div>
 			<div id="htmlTemplatesTask" class="task">
 				<table>
@@ -98,8 +116,9 @@
 							<table>
 								<tr>
 									<td class="taskTime">
-										<div id="htmlTemplatesTaskTime"></div>
+										<input id="htmlTemplatesTaskTime" type="text" value="0"/>
 									</td>
+									<td>min.</td>
 								</tr>
 								<tr>
 									<td>
@@ -112,7 +131,7 @@
 									</td>
 									<td>
 										<div id="htmlTemplatesTaskDelete" class="menuButton">
-											Delete
+											-
 										</div>
 									</td>
 								</tr>
