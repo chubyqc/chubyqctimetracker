@@ -7,3 +7,13 @@ body, html {
 #htmlTemplates {
 	visibility: hidden;
 }
+
+.historySelect {
+	position: relative;
+	z-index: 0;
+}
+
+.taskInput {
+	position: relative;
+	z-index: 1;
+}
