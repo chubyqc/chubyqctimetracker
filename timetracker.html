@@ -9,6 +9,13 @@
         <script type="text/javascript" src="lib/helpers/element.js"></script>
         <script type="text/javascript" src="lib/helpers/utils.js"></script>
 		
+        <script type="text/javascript" src="lib/listeners/itaskinputlistener.js"></script>
+        <script type="text/javascript" src="lib/listeners/itasklistener.js"></script>
+        <script type="text/javascript" src="lib/listeners/itemplateinputlistener.js"></script>
+        <script type="text/javascript" src="lib/listeners/itemplateslistener.js"></script>
+        <script type="text/javascript" src="lib/listeners/itrackerlistener.js"></script>
+        <script type="text/javascript" src="lib/listeners/ihaslisteners.js"></script>
+		
         <script type="text/javascript" src="lib/menu.js"></script>
         <script type="text/javascript" src="lib/timetracker.js"></script>
 		
@@ -29,10 +36,19 @@
         <script type="text/javascript" src="lib/factories/taskfactory.js"></script>
         <script type="text/javascript" src="lib/factories/templatefactory.js"></script>
         <script type="text/javascript" src="lib/factories/templateinputfactory.js"></script>
+		
+        <script type="text/javascript" src="lib/persistence/filebased/timedwriter.js"></script>
+        <script type="text/javascript" src="lib/persistence/filebased/loader.js"></script>
+        <script type="text/javascript" src="lib/persistence/filebased/taskinputlistener.js"></script>
+        <script type="text/javascript" src="lib/persistence/filebased/tasklistener.js"></script>
+        <script type="text/javascript" src="lib/persistence/filebased/templateinputlistener.js"></script>
+        <script type="text/javascript" src="lib/persistence/filebased/templatelistener.js"></script>
+        <script type="text/javascript" src="lib/persistence/filebased/templateslistener.js"></script>
+        <script type="text/javascript" src="lib/persistence/filebased/trackerlistener.js"></script>
 	</head>
     <body onload="new tt.TimeTracker(
 		new tt.Menu($('menuButtonTemplates'), $('menuButtonTracker')),
-		$('states'), $('htmlTemplates'))">
+		$('states'), $('htmlTemplates'))" closed="alert('asdf')">
     	<table id="menu">
     		<tr>
     			<td>
