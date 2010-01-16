@@ -2,6 +2,28 @@ body, html {
 	margin: 0px;
 	height: 100%;
 	width: 100%;
+	background-color: #eeeeee;
+	overflow: hidden;
+}
+
+.menu {
+	width: 100%;
+	height: 30px;
+}
+
+.button, .menuButton, .label, #trackerTotal {
+	cursor: default;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+.button:hover, .menuButton:hover {
+	background-color: white;
+}
+
+.menuButton {
+	width: 100px;
 }
 
 #htmlTemplates {
@@ -9,6 +31,7 @@ body, html {
 }
 
 .historySelect {
+	display: block;
 	position: relative;
 	z-index: 0;
 }
@@ -16,4 +39,33 @@ body, html {
 .taskInput {
 	position: relative;
 	z-index: 1;
+}
+
+.taskTime {
+	width: 50px;
+}
+
+.removeTask {
+	width: 20px;
+}
+
+.state {
+	position: absolute;
+	width: 100%;
+}
+
+.area {
+	background-color: #e7e7e7;
+}
+
+.template, .task {
+	margin-top: 10px;
+}
+
+.taskInput {
+	overflow-y: hidden;
+}
+
+#trackerListContainer, #templateListContainer {
+	overflow: auto;
 }

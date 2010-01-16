@@ -40,40 +40,22 @@
 		<title/>
 
 		<!-- The type of system chrome to use (either "standard" or "none"). Optional. Default standard. -->
-		<systemChrome>standard</systemChrome>
+		<systemChrome>none</systemChrome>
 
 		<!-- Whether the window is transparent. Only applicable when systemChrome is false. Optional. Default false. -->
-		<transparent>false</transparent>
+		<transparent>true</transparent>
 
 		<!-- Whether the window is initially visible. Optional. Default false. -->
 		<visible>true</visible>
 
 		<!-- Whether the user can minimize the window. Optional. Default true. -->
-		<minimizable>true</minimizable>
+		<minimizable>false</minimizable>
 
 		<!-- Whether the user can maximize the window. Optional. Default true. -->
-		<maximizable>true</maximizable>
+		<maximizable>false</maximizable>
 
 		<!-- Whether the user can resize the window. Optional. Default true. -->
-		<resizable>true</resizable>
-
-		<!-- The window's initial width. Optional. -->
-		<width>1024</width>
-
-		<!-- The window's initial height. Optional. -->
-		<height>768</height>
-
-		<!-- The window's initial x position. Optional. -->
-		<x>200</x>
-
-		<!-- The window's initial y position. Optional. -->
-		<y>200</y>
-
-		<!-- The window's minimum size, specified as a width/height pair, such as "400 200". Optional. -->
-		<minSize>800 600</minSize>
-
-		<!-- The window's initial maximum size, specified as a width/height pair, such as "1600 1200". Optional. -->
-		<maxSize>1280 1024</maxSize>
+		<resizable>false</resizable>
 	</initialWindow>
 
 	<!-- The subpath of the standard default installation location to use. Optional. -->

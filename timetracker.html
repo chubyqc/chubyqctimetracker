@@ -48,20 +48,27 @@
         <script type="text/javascript" src="lib/persistence/filebased/trackerlistener.js"></script>
 	</head>
     <body onload="new tt.TimeTracker(
-		new tt.Menu($('menuButtonTemplates'), $('menuButtonTracker')),
+		new tt.Menu($('menuButtonTemplates'), $('menuButtonTracker'), $('menuButtonHide'), $('menuButtonClose')),
 		$('states'), $('htmlTemplates'))" closed="alert('asdf')">
-    	<table id="menu">
+    	<table class="area menu">
     		<tr>
-    			<td>
+    			<td class="menuButton">
     				<div id="menuButtonTemplates" class="menuButton">Templates</div>
 				</td>
-				<td>
+				<td class="menuButton">
 					<div id="menuButtonTracker" class="menuButton">Tracker</div>
 				</td>
+				<td class="menuButton">
+					<div id="menuButtonHide" class="menuButton">Hide</div>
+				</td>
+				<td class="menuButton">
+					<div id="menuButtonClose" class="menuButton">Close</div>
+				</td>
+				<td></td>
     		</tr>
     	</table>
     	<div id="states">
-	    	<div id="tracker">
+	    	<div id="tracker" class="state">
 	    		<table>
 	    			<tr>
 	    				<td>
@@ -74,24 +81,28 @@
 						</td>
 	    			</tr>
 	    		</table>
-	    		<div id="trackerList"></div>
+				<div id="trackerListContainer">
+	    			<div id="trackerList"></div>
+				</div>
 	    		<div>
 	    			<table>
 	    				<tr>
-	    					<td>Total:</td>
+	    					<td class="label">Total:</td>
 							<td id="trackerTotal">0</td>
-							<td>min.</td>
+							<td class="label">min.</td>
 	    				</tr>
 	    			</table>
 	    		</div>
 	    	</div>
-			<div id="templates">
+			<div id="templates" class="state">
 				<div id="templatesNew" class="menuButton">New</div>
-				<div id="templatesList"></div>
+				<div id="templateListContainer">
+					<div id="templatesList"></div>
+				</div>
 			</div>
 		</div>
 		<div id="htmlTemplates">
-			<div id="htmlTemplatesTemplate">
+			<div id="htmlTemplatesTemplate" class="area template">
 				<input id="htmlTemplatesTemplateName" type="text"/>
 				<table>
 					<tr>
@@ -101,10 +112,10 @@
 							</table>
 						</td>
 						<td>
-							<div id="htmlTemplatesTemplateAdd">+</div>
+							<div id="htmlTemplatesTemplateAdd" class="button">+</div>
 						</td>
 						<td>
-							<div id="htmlTemplatesTemplateRemove">-</div>
+							<div id="htmlTemplatesTemplateRemove" class="button">-</div>
 						</td>
 					</tr>
 				</table>
@@ -112,11 +123,11 @@
 			<div id="htmlTemplatesTemplateInput">
 				<table>
 					<tr>
-						<td>
+						<td class="taskInput">
 							<input id="htmlTemplatesTemplateInputText" type="text"/>
 						</td>
 						<td>
-							<div id="htmlTemplatesTemplateInputText">-</div>
+							<div id="htmlTemplatesTemplateInputText" class="button">-</div>
 						</td>
 					</tr>
 				</table>
@@ -125,7 +136,7 @@
 				<div id="htmlTemplatesInputLabel"></div>
 				<textarea id="htmlTemplatesInputText" class="taskInput" type="text"></textarea>
 			</div>
-			<div id="htmlTemplatesTask" class="task">
+			<div id="htmlTemplatesTask" class="area task">
 				<table>
 					<tr>
 						<td>
@@ -137,22 +148,22 @@
 						<td>
 							<table>
 								<tr>
-									<td class="taskTime">
-										<input id="htmlTemplatesTaskTime" type="text" value="0"/>
+									<td>
+										<input id="htmlTemplatesTaskTime" type="text" value="0" class="taskTime"/>
 									</td>
-									<td>min.</td>
+									<td class="label">min.</td>
 								</tr>
 								<tr>
 									<td>
-										<div id="htmlTemplatesTaskStart" class="taskStart">
+										<div id="htmlTemplatesTaskStart" class="button">
 											Start
 										</div>
-										<div id="htmlTemplatesTaskStop" class="taskStop">
+										<div id="htmlTemplatesTaskStop" class="button">
 											Stop
 										</div>
 									</td>
 									<td>
-										<div id="htmlTemplatesTaskDelete" class="menuButton">
+										<div id="htmlTemplatesTaskDelete" class="button removeTask">
 											-
 										</div>
 									</td>
