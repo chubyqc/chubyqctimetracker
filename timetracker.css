@@ -69,3 +69,11 @@ body, html {
 #trackerListContainer, #templateListContainer {
 	overflow: auto;
 }
+
+.taskStarted {
+	background-color: white;
+}
+
+.taskStarted:hover {
+	background-color: #e7e7e7;
+}

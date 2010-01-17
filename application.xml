@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<application xmlns="http://ns.adobe.com/air/application/2.0beta">
+<application xmlns="http://ns.adobe.com/air/application/1.5">
 
 <!-- Adobe AIR Application Descriptor File Template.
 
@@ -57,51 +57,4 @@
 		<!-- Whether the user can resize the window. Optional. Default true. -->
 		<resizable>false</resizable>
 	</initialWindow>
-
-	<!-- The subpath of the standard default installation location to use. Optional. -->
-	<!-- <installFolder></installFolder> -->
-
-	<!-- The subpath of the Windows Start/Programs menu to use. Optional. -->
-	<!-- <programMenuFolder></programMenuFolder> -->
-
-	<!-- The icon the system uses for the application. For at least one resolution,
-		 specify the path to a PNG file included in the AIR package. Optional. -->
-	<icon>
-	<image16x16/>
-<image32x32/>
-<image48x48/>
-<image128x128/>
-</icon>
-
-	<!-- Whether the application handles the update when a user double-clicks an update version
-	of the AIR file (true), or the default AIR application installer handles the update (false).
-	Optional. Default false. -->
-	<!-- <customUpdateUI></customUpdateUI> -->
-	
-	<!-- Whether the application can be launched when the user clicks a link in a web browser.
-	Optional. Default false. -->
-	<!-- <allowBrowserInvocation></allowBrowserInvocation> -->
-
-	<!-- Listing of file types for which the application can register. Optional. -->
-	<fileTypes>
-<!-- Defines one file type. Optional. -->
-<!-- <fileType> -->
-<!-- The name that the system displays for the registered file type. Required. -->
-<!-- <name></name> -->
-<!-- The extension to register. Required. -->
-<!-- <extension></extension> -->
-<!-- The description of the file type. Optional. -->
-<!-- <description></description> -->
-<!-- The MIME type. Optional. -->
-<!-- <contentType></contentType> -->
-<!-- The icon to display for the file type. Optional. -->
-<!-- <icon>
-				<image16x16></image16x16>
-				<image32x32></image32x32>
-				<image48x48></image48x48>
-				<image128x128></image128x128>
-			</icon> -->
-<!-- </fileType> -->
-</fileTypes>
-
 </application>
