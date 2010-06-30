@@ -64,30 +64,38 @@
     	</table>
     	<div id="states">
 	    	<div id="tracker" class="state">
-	    		<table>
+	    		<table class="fullTable" cellpadding="0" cellspacing="0" border="0">
 	    			<tr>
 	    				<td>
-	    					<select id="templateChooser">
-	    						<option>Templates</option>
-	    					</select>
+				    		<table>
+				    			<tr>
+				    				<td>
+				    					<select id="templateChooser">
+				    						<option>Templates</option>
+				    					</select>
+				    				</td>
+									<td>
+										<div id="newTaskButton" class="menuButton">New</div>
+									</td>
+				    			</tr>
+				    		</table>
+							<div id="trackerListContainer">
+				    			<div id="trackerList"></div>
+							</div>
+			    			<table>
+			    				<tr>
+			    					<td class="label">Total:</td>
+									<td id="trackerTotal">0</td>
+									<td class="label">min.</td>
+			    				</tr>
+			    			</table>
 	    				</td>
-						<td>
-							<div id="newTaskButton" class="menuButton">New</div>
+						<td class="currentTasksContainer">
+							<div class="currentTasksTitle">Current tasks</div>
+							<div id="currentTasksContainer"></div>
 						</td>
 	    			</tr>
-	    		</table>
-				<div id="trackerListContainer">
-	    			<div id="trackerList"></div>
-				</div>
-	    		<div>
-	    			<table>
-	    				<tr>
-	    					<td class="label">Total:</td>
-							<td id="trackerTotal">0</td>
-							<td class="label">min.</td>
-	    				</tr>
-	    			</table>
-	    		</div>
+				</table>
 	    	</div>
 			<div id="templates" class="state">
 				<div id="templatesNew" class="menuButton">New</div>
