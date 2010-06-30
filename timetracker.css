@@ -6,6 +6,16 @@ body, html {
 	overflow: hidden;
 }
 
+select, input, div, html, body, td {
+	font-size: 12px;
+}
+
+input {
+	margin: 0px;
+	padding: 0px;
+	height: 16px;
+}
+
 .menu {
 	width: 100%;
 	height: 30px;
@@ -15,7 +25,6 @@ body, html {
 	cursor: default;
 	text-align: center;
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 12px;
 	min-width: 20px;
 }
 
@@ -45,6 +54,7 @@ body, html {
 .taskInput {
 	position: relative;
 	z-index: 1;
+	overflow-y: hidden;
 }
 
 .taskTime {
@@ -65,11 +75,7 @@ body, html {
 }
 
 .template, .task {
-	margin-top: 10px;
-}
-
-.taskInput {
-	overflow-y: hidden;
+	margin-top: 2px;
 }
 
 #trackerListContainer, #templateListContainer {
