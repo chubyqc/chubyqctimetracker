@@ -83,8 +83,10 @@ input {
 }
 
 .currentTasksContainer {
-	width: 50%;
 	border-left: 1px solid white;
+}
+
+.tasksContainer {
 	vertical-align: top;
 }
 
@@ -133,4 +135,8 @@ input {
 	width: 100%;
 	padding-top: 1px;
 	height: 20px;
+}
+
+.taskList, .tasksContainer {
+	overflow: auto;
 }
