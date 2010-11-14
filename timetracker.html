@@ -50,20 +50,36 @@
         <script type="text/javascript" src="lib/persistence/filebased/trackerlistener.js"></script>
 	</head>
     <body onload="tt.instance = new tt.TimeTracker(
-		new tt.Menu($('menuButtonTemplates'), $('menuButtonTracker'), $('menuButtonHide'), $('menuButtonClose')),
+		new tt.Menu($('menuButtonTemplates'), $('menuButtonTracker'), $('menuButtonResetTime'), $('menuButtonHide'), $('menuButtonClose')),
 		$('states'), $('htmlTemplates'))"
 		onresize="if (tt.instance) tt.instance.resized()">
-    	<table class="area menu">
-    		<tr>
-    			<td class="menuButton">
-    				<div id="menuButtonTemplates">Templates</div>
-				</td>
-				<td class="menuButton">
-					<div id="menuButtonTracker">Tracker</div>
-				</td>
-				<td></td>
-    		</tr>
-    	</table>
+		<table class="area menu" border="0" cellspacing="0" cellpadding="0">
+		    <tr>
+		        <td class="menuButtons">
+		            <table class="menu">
+                		<tr>
+                			<td class="menuButton">
+                				<div id="menuButtonTemplates">Templates</div>
+            				</td>
+            				<td class="menuButton">
+            					<div id="menuButtonTracker">Tracker</div>
+            				</td>
+            				<td></td>
+                		</tr>
+                	</table>
+		        </td>
+                <td>
+                    <table class="menu">
+                		<tr>
+            				<td class="menuButton">
+            					<div id="menuButtonResetTime">Reset Time</div>
+            				</td>
+            				<td></td>
+                		</tr>
+                	</table>
+                </td>
+		    </tr>
+        </table>
     	<div id="states">
 	    	<div id="tracker" class="state">
 	    		<table class="fullTable" cellpadding="0" cellspacing="0" border="0">
@@ -172,6 +188,7 @@
 			<div id="htmlTemplatesTab">
 				<div id="htmlTemplatesNewButtonArea" class="newButtonArea">
 					<div id="htmlTemplatesNewTaskButton" class="menuButton newButton">New</div>
+					<div id="htmlTemplatesResetProjectTimeTaskButton" class="menuButton newButton">Reset Time</div>
 				</div>
 				<div id="htmlTemplatesTrackerList" class="taskList"></div>
 			</div>

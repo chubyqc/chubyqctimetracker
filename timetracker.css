@@ -21,6 +21,10 @@ input {
 	height: 30px;
 }
 
+.menuButtons {
+    width: 450px;
+}
+
 .button, .menuButton, .label, #trackerTotal {
 	cursor: default;
 	text-align: center;
