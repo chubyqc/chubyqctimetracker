@@ -88,9 +88,15 @@
 							<div id="tabsContainer"></div>
 			    			<table>
 			    				<tr>
-			    					<td class="label">Total:</td>
-									<td id="trackerTotal">0</td>
-									<td class="label">min.</td>
+			    					<td class="total">Total: (</td>
+									<td id="trackerTotal" class="total">0</td>
+									<td class="total">min. )</td>
+									<td class="total">(</td>
+									<td id="trackerTotalInFractionalHours" class="total">0.00</td>
+									<td class="total">)</td>
+									<td class="total">(</td>
+									<td id="trackerTotalInHours" class="total">0h00</td>
+									<td class="total">)</td>
 			    				</tr>
 			    			</table>
 	    				</td>
@@ -161,6 +167,12 @@
 										<input id="htmlTemplatesTaskTime" type="text" value="0" class="taskTime"/>
 									</td>
 									<td class="label">min.</td>
+									<td class="total">(</td>
+									<td id="htmlTemplatesTaskTimeInFractionalHours" class="total"></td>
+									<td class="total">)</td>
+									<td class="total">(</td>
+									<td id="htmlTemplatesTaskTimeInHours" class="total"></td>
+									<td class="total">)</td>
 								</tr>
 								<tr>
 									<td>
@@ -173,6 +185,12 @@
 											-
 										</div>
 									</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
 								</tr>
 							</table>
 						</td>
@@ -190,7 +208,20 @@
 					<div id="htmlTemplatesNewTaskButton" class="menuButton newButton">New</div>
 					<div id="htmlTemplatesResetProjectTimeTaskButton" class="menuButton newButton">Reset Time</div>
 				</div>
-				<div id="htmlTemplatesTrackerList" class="taskList"></div>
+                <div id="htmlTemplatesTrackerList" class="taskList"></div>
+                <table class="taskListTotal">
+    				<tr>
+    					<td class="total">Total: (</td>
+						<td id="htmlTemplatesTotal" class="total">0</td>
+						<td class="total">min. )</td>
+						<td class="total">(</td>
+						<td id="htmlTemplatesTotalInFractionalHours" class="total">0.00</td>
+						<td class="total">)</td>
+						<td class="total">(</td>
+						<td id="htmlTemplatesTotalInHours" class="total">0h00</td>
+						<td class="total">)</td>
+    				</tr>
+    			</table>
 			</div>
 		</div>
     </body>
