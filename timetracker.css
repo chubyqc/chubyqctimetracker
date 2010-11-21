@@ -90,6 +90,11 @@ input {
 	overflow: auto;
 }
 
+.rightPanel {
+    height: 100%;
+    width: 50%;
+}
+
 .currentTasksContainer {
 	border-left: 1px solid white;
 }
@@ -97,6 +102,16 @@ input {
 .tasksContainer {
 	vertical-align: top;
 	width: 50%;
+}
+
+#currentGoalContainer {
+    height: 60px;
+	border-bottom: 1px solid white;
+}
+
+#goalInput {
+    width: 80px;
+    text-align: center;
 }
 
 .fullTable {

@@ -14,6 +14,7 @@
         <script type="text/javascript" src="lib/listeners/itasklistener.js"></script>
         <script type="text/javascript" src="lib/listeners/itemplateinputlistener.js"></script>
         <script type="text/javascript" src="lib/listeners/itemplateslistener.js"></script>
+        <script type="text/javascript" src="lib/listeners/ioptionslistener.js"></script>
         <script type="text/javascript" src="lib/listeners/itrackerlistener.js"></script>
         <script type="text/javascript" src="lib/listeners/ihaslisteners.js"></script>
 		
@@ -33,6 +34,8 @@
         <script type="text/javascript" src="lib/tracker/taskinput.js"></script>
         <script type="text/javascript" src="lib/tracker/tabpanel.js"></script>
         <script type="text/javascript" src="lib/tracker/tab.js"></script>
+        <script type="text/javascript" src="lib/tracker/goal.js"></script>
+        <script type="text/javascript" src="lib/tracker/options.js"></script>
         <script type="text/javascript" src="lib/tracker/tracker.js"></script>
 		
         <script type="text/javascript" src="lib/factories/inputfactory.js"></script>
@@ -47,10 +50,11 @@
         <script type="text/javascript" src="lib/persistence/filebased/templateinputlistener.js"></script>
         <script type="text/javascript" src="lib/persistence/filebased/templatelistener.js"></script>
         <script type="text/javascript" src="lib/persistence/filebased/templateslistener.js"></script>
+        <script type="text/javascript" src="lib/persistence/filebased/optionslistener.js"></script>
         <script type="text/javascript" src="lib/persistence/filebased/trackerlistener.js"></script>
 	</head>
     <body onload="tt.instance = new tt.TimeTracker(
-		new tt.Menu($('menuButtonTemplates'), $('menuButtonTracker'), $('menuButtonResetTime'), $('menuButtonHide'), $('menuButtonClose')),
+		new tt.Menu($('menuButtonTemplates'), $('menuButtonTracker'), $('menuButtonOptions'), $('menuButtonResetTime'), $('menuButtonHide'), $('menuButtonClose')),
 		$('states'), $('htmlTemplates'))"
 		onresize="if (tt.instance) tt.instance.resized()">
 		<table class="area menu" border="0" cellspacing="0" cellpadding="0">
@@ -63,6 +67,9 @@
             				</td>
             				<td class="menuButton">
             					<div id="menuButtonTracker">Tracker</div>
+            				</td>
+            				<td class="menuButton">
+            					<div id="menuButtonOptions">Options</div>
             				</td>
             				<td></td>
                 		</tr>
@@ -101,18 +108,50 @@
 			    			</table>
 	    				</td>
 						<td class="tasksContainer currentTasksContainer">
-							<div class="currentTasksTitle">Current tasks</div>
-							<div id="currentTasksContainer" class="tasksContainer"></div>
+						    <table class="rightPanel" cellpadding="0" cellspacing="0" border="0">
+						        <tr>
+						            <td>
+						                <div class="currentTasksTitle">Current goal</div>
+            							<div id="currentGoalContainer" class="tasksContainer">
+            							    <div>
+                							    - Your goal is to achieve this amount of time:
+                                                <input id="goalInput" type="text" value="7h30" />
+                                            </div>
+                                            <div>
+                                                - You still have 
+                                                ( <span id="goalRemainingMin"></span> min. ) 
+                                                ( <span id="goalRemainingFractionalHours"></span> ) 
+                                                ( <span id="goalRemainingHours"></span> ) 
+                                                 to do.
+                                            </div>
+                                            <div>
+                                                - You should be done by <span id="goalDoneTime"></span>.
+                                            </div>
+            							</div>
+						            </td>
+						        </tr>
+                                <tr>
+                                    <td>
+            							<div class="currentTasksTitle">Current tasks</div>
+            							<div id="currentTasksContainer" class="tasksContainer"></div>
+                                    </td>
+                                </tr>
+						    </table>
 						</td>
 	    			</tr>
 				</table>
 	    	</div>
 			<div id="templates" class="state">
 				<div class="newButtonArea">
-					<div id="templatesNew" class="menuButton newButton">New</div>
+					<div id="templatesNew" class="menuButton newButton"a>New</div>
 				</div>
 				<div id="templateListContainer">
 					<div id="templatesList"></div>
+				</div>
+			</div>
+			<div id="options" class="state">
+				<div>
+					<input id="optionsAlwaysOnTop" type="checkbox" checked/>Always on top
 				</div>
 			</div>
 		</div>
