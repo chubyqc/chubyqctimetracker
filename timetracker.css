@@ -79,6 +79,15 @@ input {
 
 .removeTask {
 	width: 20px;
+    float: right;
+}
+
+.taskBtnsContainer {
+    width: 98%;
+}
+
+.paddingTD {
+    width: 100%;
 }
 
 .state {
@@ -103,7 +112,7 @@ input {
     width: 50%;
 }
 
-.currentTasksContainer {
+.currentTasksContainer, .todoTasksContainer {
 	border-left: 1px solid white;
 }
 
@@ -115,6 +124,7 @@ input {
 #currentGoalContainer {
     height: 60px;
 	border-bottom: 1px solid white;
+    width: 100%;
 }
 
 #goalInput {
@@ -126,8 +136,12 @@ input {
 	width: 100%;
 }
 
-.currentTasksTitle {
+.currentTasksTitle, .todoTasksTitle {
 	border-bottom: 1px solid white;
+}
+
+.todoTasksTitle {
+    border-top: 1px solid white;
 }
 
 .tabHeader {

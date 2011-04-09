@@ -136,6 +136,12 @@
             							<div id="currentTasksContainer" class="tasksContainer"></div>
                                     </td>
                                 </tr>
+                                <tr>
+                                    <td>
+            							<div class="todoTasksTitle">Tasks to do</div>
+            							<div id="todoTasksContainer" class="tasksContainer"></div>
+                                    </td>
+                                </tr>
 						    </table>
 						</td>
 	    			</tr>
@@ -192,7 +198,7 @@
 			</div>
 			<div id="htmlTemplatesTask" class="area task">
 			    <div id="htmlTemplatesTaskProjectName"></div>
-				<table cellpadding="0" cellspacing="0" border="0">
+				<table class="taskBtnsContainer" cellpadding="0" cellspacing="0" border="0">
 					<tr>
 						<td>
 							<table>
@@ -202,7 +208,7 @@
 							</table>
 						</td>
 						<td>
-							<table>
+							<table class="taskBtnsContainer">
 								<tr>
 									<td>
 										<input id="htmlTemplatesTaskTime" type="text" value="0" class="taskTime"/>
@@ -214,15 +220,19 @@
 									<td class="total">(</td>
 									<td id="htmlTemplatesTaskTimeInHours" class="total"></td>
 									<td class="total">)</td>
+                                    <td class="paddingTD"></td>
 								</tr>
 								<tr>
-									<td colspan="8">
+									<td colspan="9">
 									    <div>
     										<div id="htmlTemplatesTaskStart" class="button taskbutton">
     											Start
     										</div>
                                             <div id="htmlTemplatesTaskReset" class="button taskbutton">
     											Reset
+    										</div>
+                                            <div id="htmlTemplatesTaskTodo" class="button taskbutton">
+    											Todo
     										</div>
                                             <div id="htmlTemplatesTaskDelete" class="button taskbutton removeTask">
     											-
