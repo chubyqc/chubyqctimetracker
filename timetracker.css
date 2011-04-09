@@ -45,6 +45,14 @@ input {
 	background-color: white;
 }
 
+.taskbutton {
+    float: left;
+    margin-left: 3px;
+    margin-right: 3px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
 .menuButton {
 	width: 100px;
 }
