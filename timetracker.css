@@ -1,0 +1,198 @@
+body, html {
+	margin: 0px;
+	height: 100%;
+	width: 100%;
+	background-color: #eeeeee;
+	overflow: hidden;
+}
+
+select, input, div, html, body, td {
+	font-size: 12px;
+}
+
+input {
+	margin: 0px;
+	padding: 0px;
+	height: 16px;
+}
+
+.menu {
+	width: 100%;
+	height: 30px;
+}
+
+.menuButtons {
+    width: 450px;
+}
+
+.button, .menuButton, .label, .total {
+	cursor: default;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	min-width: 20px;
+}
+
+.total {
+    min-width: 0px;
+}
+
+.button, .menuButton {
+	border: 1px solid black;
+	background-color: #eeeeee;
+}
+
+.button:hover, .menuButton:hover {
+	background-color: white;
+}
+
+.taskbutton {
+    float: left;
+    margin-left: 3px;
+    margin-right: 3px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.menuButton {
+	width: 100px;
+}
+
+#htmlTemplates {
+	visibility: hidden;
+}
+
+.historySelect {
+	display: block;
+	position: relative;
+	z-index: 0;
+}
+
+.taskInput {
+	position: relative;
+	z-index: 1;
+	overflow-y: hidden;
+}
+
+.taskTime {
+	width: 50px;
+}
+
+.removeTask {
+	width: 20px;
+    float: right;
+}
+
+.taskBtnsContainer {
+    width: 98%;
+}
+
+.paddingTD {
+    width: 100%;
+}
+
+.state {
+	position: absolute;
+	width: 100%;
+}
+
+.area, .taskStarted, .tabHeader {
+	background-color: #cccccc;
+}
+
+.template, .task {
+	margin-top: 2px;
+}
+
+#trackerListContainer, #templateListContainer {
+	overflow: auto;
+}
+
+.rightPanel {
+    height: 100%;
+    width: 50%;
+}
+
+.currentTasksContainer, .todoTasksContainer {
+	border-left: 1px solid white;
+}
+
+.tasksContainer {
+	vertical-align: top;
+	width: 50%;
+}
+
+#currentGoalContainer {
+    height: 60px;
+	border-bottom: 1px solid white;
+    width: 100%;
+}
+
+#goalInput {
+    width: 80px;
+    text-align: center;
+}
+
+.fullTable {
+	width: 100%;
+}
+
+.currentTasksTitle, .todoTasksTitle {
+	border-bottom: 1px solid white;
+}
+
+.todoTasksTitle {
+    border-top: 1px solid white;
+}
+
+.tabHeader {
+	position: relative;
+	top: 0px;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	margin-left: 2px;
+	margin-right: 2px;
+	border: 1px solid black;
+	border-bottom: none;
+	cursor: default;
+    height: 100%;
+}
+
+.tabHeaderOn {
+	background-color: #eeeeee;
+	border-bottom: 0px;
+	top: 1px;
+}
+
+.tabHeader:hover {
+	background-color: #eeeeee;
+}
+
+.newButton {
+	float: right;
+}
+
+.newButtonArea {
+	height: 14px;
+	padding: 2px;
+}
+
+.tabPanelHeaderArea {
+	border-bottom: 1px solid black;
+	width: 100%;
+	padding-top: 1px;
+	height: 20px;
+}
+
+.taskList, .tasksContainer {
+	overflow: auto;
+}
+
+#templateListContainer {
+	width: 100%;
+}
+
+.taskListTotal {
+    float: right;
+}
