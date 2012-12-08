@@ -37,6 +37,7 @@
         <script type="text/javascript" src="lib/tracker/goal.js"></script>
         <script type="text/javascript" src="lib/tracker/options.js"></script>
         <script type="text/javascript" src="lib/tracker/tracker.js"></script>
+        <script type="text/javascript" src="lib/tracker/previoustimemanager.js"></script>
 		
         <script type="text/javascript" src="lib/factories/inputfactory.js"></script>
         <script type="text/javascript" src="lib/factories/taskfactory.js"></script>
@@ -54,8 +55,15 @@
         <script type="text/javascript" src="lib/persistence/filebased/trackerlistener.js"></script>
 	</head>
     <body onload="tt.instance = new tt.TimeTracker(
-		new tt.Menu($('menuButtonTemplates'), $('menuButtonTracker'), $('menuButtonOptions'), $('menuButtonResetTime'), $('menuButtonHide'), $('menuButtonClose')),
-		$('states'), $('htmlTemplates'))"
+		new tt.Menu($('menuButtonTemplates')
+			, $('menuButtonTracker')
+			, $('menuButtonOptions')
+			, $('menuButtonResetTime')
+			, $('menuButtonHide')
+			, $('menuButtonClose')),
+		$('states'), $('htmlTemplates')
+			, $('previousTimeSelect')
+			, $('menuButtonStartNewTime'))"
 		onresize="if (tt.instance) tt.instance.resized()">
 		<table class="area menu" border="0" cellspacing="0" cellpadding="0">
 		    <tr>
@@ -81,7 +89,21 @@
             				<td class="menuButton">
             					<div id="menuButtonResetTime">Reset Time</div>
             				</td>
-            				<td></td>
+            				<td>
+								<table class="menu">
+									<tr>
+										<td>
+			            					<select id="previousTimeSelect">
+			            						<option value="previousTimes">Previous times</option>
+												<option value="now">Now</option>
+			            					</select>
+										</td>
+										<td class="menuButton">
+											<div id="menuButtonStartNewTime">Start new time</div>
+										</td>
+									</tr>
+								</table>
+            				</td>
                 		</tr>
                 	</table>
                 </td>
