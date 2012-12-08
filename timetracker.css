@@ -196,3 +196,7 @@ input {
 .taskListTotal {
     float: right;
 }
+
+#previousTimeSelect {
+	float: right;
+}
