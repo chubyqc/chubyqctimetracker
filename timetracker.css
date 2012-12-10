@@ -200,3 +200,34 @@ input {
 #previousTimeSelect {
 	float: right;
 }
+
+#previousTimesWindow {
+	border: 1px solid black;
+	width: 500px;
+	height: 300px;
+	position: absolute;
+	margin-left: 50%;
+	margin-top: 50%;
+	left: -250px;
+	top: -150px;
+	z-index: 10000;
+	background: #eeeeee;
+	display: none;
+}
+
+#previousTimesWindowContent {
+	border-bottom: 1px solid black;
+	height: 270px;
+	background: white;
+	overflow: auto;
+}
+	
+
+#previousTimesWindowDeleteButton, #previousTimesWindowCloseButton {
+	float: right;
+	margin-top: 5px;
+	margin-left: 10px;
+	margin-right: 5px;
+	padding: 2px;
+}
+
