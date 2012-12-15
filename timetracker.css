@@ -223,7 +223,7 @@ input {
 }
 	
 
-#previousTimesWindowDeleteButton, #previousTimesWindowCloseButton {
+#previousTimesWindowDeleteButton, #previousTimesWindowCloseButton, #previousTimesWindowToggleRoundingButton {
 	float: right;
 	margin-top: 5px;
 	margin-left: 10px;
